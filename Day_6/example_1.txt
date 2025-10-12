@@ -1,0 +1,2 @@
+I am a new message
+I will override the informationI am a new file created by using "w" - writing mode.

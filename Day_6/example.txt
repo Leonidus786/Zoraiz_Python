@@ -1,0 +1,9 @@
+Hello, world!
+This is a new line.
+This line was added while teaching Zoraiz. 
+Append operation taking place!
+Python is cool.
+I am a new file created by using "a" - append mode.
+First line 
+Second line 
+Third line
