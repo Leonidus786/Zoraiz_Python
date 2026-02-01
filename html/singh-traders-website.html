@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singh Traders - Grow Green for a Healthy Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --earth-green: #2d5016;
+            --fresh-green: #6b8e23;
+            --sky-blue: #87ceeb;
+            --soil-brown: #8b6f47;
+            --cream: #faf8f3;
+            --wheat-gold: #f4c542;
+            --deep-earth: #1a3409;
+            --mango-orange: #ff9500;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--deep-earth);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(29, 53, 9, 0.08);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--earth-green);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--deep-earth);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--fresh-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, var(--earth-green) 0%, var(--fresh-green) 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            padding: 4rem 2rem;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 149, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(135, 206, 235, 0.1) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Fraunces', serif;
+            font-size: 4.5rem;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-text .tagline {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            animation: slideInLeft 1s ease-out 0.2s both;
+        }
+
+        .hero-text .mission {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: slideInLeft 1s ease-out 0.4s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--earth-green);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: slideInLeft 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-visual {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            animation: slideInRight 1s ease-out 0.3s both;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .hero-card h3 {
+            font-family: 'Fraunces', serif;
+            color: var(--earth-green);
+            margin-bottom: 0.8rem;
+            font-size: 1.5rem;
+        }
+
+        .hero-card p {
+            color: var(--deep-earth);
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Fraunces', serif;
+            font-size: 3rem;
+            color: var(--earth-green);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--fresh-green);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .about-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(45, 80, 22, 0.1);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 6rem 2rem;
+            background: linear-gradient(to bottom, var(--cream), rgba(135, 206, 235, 0.1));
+        }
+
+        .products-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--fresh-green), var(--earth-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-info h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            color: var(--earth-green);
+            margin-bottom: 1rem;
+        }
+
+        .product-info p {
+            color: var(--deep-earth);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .product-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--wheat-gold);
+            color: var(--deep-earth);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .benefits-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 20px;
+            background: var(--cream);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            background: linear-gradient(135deg, var(--fresh-green), var(--earth-green));
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .benefit-item h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--earth-green), var(--deep-earth));
+            color: white;
+        }
+
+        .services-content {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .service-feature {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            min-width: 80px;
+        }
+
+        .service-feature h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .contact-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--cream);
+            border-radius: 15px;
+        }
+
+        .contact-item-icon {
+            font-size: 2rem;
+            color: var(--fresh-green);
+        }
+
+        .contact-item-text h4 {
+            font-family: 'Fraunces', serif;
+            color: var(--earth-green);
+            margin-bottom: 0.3rem;
+        }
+
+        .map-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--sky-blue), var(--fresh-green));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        /* Reviews Section */
+        .reviews {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .review-form {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            background: var(--cream);
+            padding: 3rem;
+            border-radius: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--earth-green);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--fresh-green);
+            border-radius: 10px;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--earth-green);
+            box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: linear-gradient(135deg, var(--fresh-green), var(--earth-green));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(45, 80, 22, 0.3);
+        }
+
+        .reviews-display {
+            max-width: 1200px;
+            margin: 4rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 20px;
+            border-left: 4px solid var(--fresh-green);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .review-name {
+            font-weight: 600;
+            color: var(--earth-green);
+        }
+
+        .review-rating {
+            color: var(--wheat-gold);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-earth);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            margin-top: 1rem;
+        }
+
+        /* Ad Space */
+        .ad-space {
+            background: linear-gradient(135deg, var(--wheat-gold), var(--mango-orange));
+            padding: 3rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .ad-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .ad-content h3 {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Singh Traders</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Fresh From Farm to Your Table</h1>
+                <p class="tagline">Grow Green for a Healthy Future</p>
+                <p class="mission">At Singh Traders, we're committed to delivering the freshest agricultural produce directly from our farms. Our seasonal vegetables and premium mangoes are cultivated without chemicals, ensuring pure, natural goodness for you and your family.</p>
+                <a href="#products" class="cta-button">Explore Our Products</a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <h3>🥬 Fresh Vegetables</h3>
+                    <p>Seasonal produce harvested at peak ripeness, delivered fresh with no chemicals</p>
+                </div>
+                <div class="hero-card">
+                    <h3>🥭 Premium Mangoes</h3>
+                    <p>Export-quality mangoes grown naturally for exceptional taste and nutrition</p>
+                </div>
+                <div class="hero-card">
+                    <h3>🌾 Quality Wheat</h3>
+                    <p>Sustainably grown wheat from our carefully managed fields</p>
+                </div>
+                <div class="hero-card">
+                    <h3>🎋 Fresh Sugarcane</h3>
+                    <p>Sweet, natural sugarcane harvested fresh from our plantations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Singh Traders</h2>
+        <p class="section-subtitle">Your Trusted Agricultural Marketing Partner</p>
+        <div class="about-content">
+            <p>Singh Traders is a premier agricultural marketing company specializing in high-quality produce including seasonal vegetables, mangoes, sugarcane, and wheat. With years of experience in the agricultural sector, we've built our reputation on delivering fresh, chemical-free produce that meets the highest standards of quality.</p>
+            <br>
+            <p>Our vision, "Grow Green for a Healthy Future," drives everything we do. We believe in sustainable farming practices that not only produce superior crops but also protect our environment for future generations. From farm to market, we maintain strict quality control to ensure that every product bearing the Singh Traders name represents the best of Indian agriculture.</p>
+            <br>
+            <p>Operating with a valid trading house license, we serve farmers, traders, and the general public across markets, with a special focus on export-quality seasonal vegetables and mangoes. Our commitment to freshness and natural cultivation methods sets us apart in the agricultural marketing industry.</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <h2 class="section-title">Our Premium Products</h2>
+        <p class="section-subtitle">Seasonal Excellence, Year-Round Quality</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">🥬</div>
+                <div class="product-info">
+                    <h3>Seasonal Vegetables</h3>
+                    <p>Our flagship offering includes a wide variety of fresh, seasonal vegetables grown without any chemicals. From leafy greens to root vegetables, each harvest is timed perfectly to ensure maximum flavor and nutritional value.</p>
+                    <p><strong>Features:</strong> Chemical-free, Fresh harvest, Export quality, Seasonal variety</p>
+                    <span class="product-tag">EXPORT QUALITY</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🥭</div>
+                <div class="product-info">
+                    <h3>Premium Mangoes</h3>
+                    <p>Experience the king of fruits at its finest. Our export-quality mangoes are carefully cultivated and harvested at peak ripeness to deliver exceptional sweetness, aroma, and texture that mango lovers crave.</p>
+                    <p><strong>Features:</strong> Export quality, Natural cultivation, Perfect ripeness, Multiple varieties</p>
+                    <span class="product-tag">EXPORT QUALITY</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🌾</div>
+                <div class="product-info">
+                    <h3>Quality Wheat</h3>
+                    <p>Sustainably grown wheat from our managed fields, perfect for flour production and various culinary applications. Our wheat meets industry standards for quality and purity.</p>
+                    <p><strong>Features:</strong> High quality, Sustainable farming, Consistent supply, Industry standard</p>
+                    <span class="product-tag">PREMIUM GRADE</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🎋</div>
+                <div class="product-info">
+                    <h3>Fresh Sugarcane</h3>
+                    <p>Sweet, fresh sugarcane harvested from our plantations. Perfect for juice extraction or sugar production, our sugarcane delivers natural sweetness and high juice content.</p>
+                    <p><strong>Features:</strong> Fresh harvest, High sweetness, Natural cultivation, Consistent quality</p>
+                    <span class="product-tag">FARM FRESH</span>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 3rem; color: var(--deep-earth); font-style: italic;">
+            <p>* Prices vary seasonally based on demand and supply. Contact us for current pricing and availability.</p>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Health Benefits of Fresh Vegetables</h2>
+        <p class="section-subtitle">Nature's Medicine for Your Daily Life</p>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon">💪</div>
+                <h3>Boosts Immunity</h3>
+                <p>Rich in vitamins and antioxidants that strengthen your immune system naturally</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">❤️</div>
+                <h3>Heart Health</h3>
+                <p>Low in calories and high in fiber, promoting cardiovascular wellness</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <h3>Energy & Vitality</h3>
+                <p>Natural nutrients provide sustained energy throughout your day</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🧠</div>
+                <h3>Mental Clarity</h3>
+                <p>Essential nutrients support brain function and cognitive health</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">✨</div>
+                <h3>Radiant Skin</h3>
+                <p>Vitamins and minerals promote healthy, glowing skin from within</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon">🌱</div>
+                <h3>Digestive Health</h3>
+                <p>High fiber content aids digestion and promotes gut health</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title" style="color: white;">Our Services</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Beyond Products - Complete Solutions</p>
+        <div class="services-content">
+            <div class="service-feature">
+                <div class="service-icon">❄️</div>
+                <div>
+                    <h3>Cold Storage Facilities</h3>
+                    <p>State-of-the-art cold storage solutions to maintain the freshness and quality of your produce. Our temperature-controlled facilities ensure that vegetables and fruits retain their nutritional value and market appeal for extended periods.</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <div class="service-icon">🚚</div>
+                <div>
+                    <h3>Export Services</h3>
+                    <p>Specialized handling and logistics for export-quality produce, ensuring your products reach international markets in pristine condition.</p>
+                </div>
+            </div>
+            <div class="service-feature">
+                <div class="service-icon">🤝</div>
+                <div>
+                    <h3>Direct Farmer Support</h3>
+                    <p>We work directly with farmers to ensure fair pricing, quality standards, and sustainable farming practices that benefit everyone in the supply chain.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertisement Space -->
+    <section class="ad-space">
+        <div class="ad-content">
+            <h3>🌟 Special Seasonal Offer 🌟</h3>
+            <p>Contact us today to learn about our current seasonal specials and bulk order discounts!</p>
+            <p style="margin-top: 1rem; font-size: 1.2rem; font-weight: 600;">Fresh. Natural. Trusted.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We're Here to Serve You</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3 style="font-family: 'Fraunces', serif; font-size: 2rem; color: var(--earth-green); margin-bottom: 2rem;">Contact Information</h3>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📧</div>
+                    <div class="contact-item-text">
+                        <h4>Email Us</h4>
+                        <p>contact@singhtraders.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📞</div>
+                    <div class="contact-item-text">
+                        <h4>Call Us</h4>
+                        <p>+91-XXXX-XXXXXX</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">📍</div>
+                    <div class="contact-item-text">
+                        <h4>Visit Us</h4>
+                        <p>Agricultural Market, Your City, State, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon">⏰</div>
+                    <div class="contact-item-text">
+                        <h4>Business Hours</h4>
+                        <p>Mon-Sat: 6:00 AM - 8:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="map-container">
+                <h3 style="font-family: 'Fraunces', serif; font-size: 2rem; color: var(--earth-green); margin-bottom: 1.5rem;">Find Us</h3>
+                <div class="map-placeholder">
+                    📍
+                    <p style="position: absolute; bottom: 2rem; font-size: 1rem;">Interactive map will be embedded here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <h2 class="section-title">Customer Reviews & Feedback</h2>
+        <p class="section-subtitle">Your Voice Matters to Us</p>
+        
+        <div class="review-form">
+            <h3 style="font-family: 'Fraunces', serif; font-size: 1.8rem; color: var(--earth-green); margin-bottom: 2rem; text-align: center;">Share Your Experience</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating *</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select rating</option>
+                        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                        <option value="4">⭐⭐⭐⭐ Very Good</option>
+                        <option value="3">⭐⭐⭐ Good</option>
+                        <option value="2">⭐⭐ Fair</option>
+                        <option value="1">⭐ Needs Improvement</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product">Product Purchased</label>
+                    <select id="product" name="product">
+                        <option value="">Select product</option>
+                        <option value="vegetables">Seasonal Vegetables</option>
+                        <option value="mangoes">Premium Mangoes</option>
+                        <option value="wheat">Quality Wheat</option>
+                        <option value="sugarcane">Fresh Sugarcane</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="review">Your Review *</label>
+                    <textarea id="review" name="review" required placeholder="Share your experience with Singh Traders..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="suggestions">Suggestions for Improvement</label>
+                    <textarea id="suggestions" name="suggestions" placeholder="How can we serve you better?"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit Review</button>
+            </form>
+        </div>
+
+        <div class="reviews-display" id="reviewsDisplay">
+            <!-- Sample reviews -->
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-name">Rajesh Kumar</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"The vegetables are always fresh and the quality is exceptional. Singh Traders has become my go-to supplier for all produce needs!"</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Product: Seasonal Vegetables</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-name">Priya Sharma</span>
+                    <span class="review-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>"Best mangoes I've ever tasted! Perfectly ripe and sweet. The cold storage facility ensures they stay fresh for longer."</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Product: Premium Mangoes</p>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <span class="review-name">Amit Patel</span>
+                    <span class="review-rating">⭐⭐⭐⭐</span>
+                </div>
+                <p>"Reliable supplier with consistent quality. Their commitment to chemical-free produce is commendable. Highly recommended for traders!"</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Product: Multiple Products</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="color: white; font-size: 2rem; margin-bottom: 1rem;">Singh Traders</div>
+            <p style="font-size: 1.1rem; margin-bottom: 1rem;">Grow Green for a Healthy Future</p>
+            <p>&copy; 2026 Singh Traders. All rights reserved. | Licensed Trading House</p>
+            <p style="margin-top: 1.5rem; font-size: 0.9rem;">Fresh • Natural • Trusted</p>
+        </div>
+    </footer>
+
+    <script>
+        // Review form submission
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const rating = document.getElementById('rating').value;
+            const review = document.getElementById('review').value;
+            const product = document.getElementById('product').value;
+            
+            // Create star rating
+            let stars = '';
+            for(let i = 0; i < rating; i++) {
+                stars += '⭐';
+            }
+            
+            // Create new review card
+            const reviewCard = document.createElement('div');
+            reviewCard.className = 'review-card';
+            reviewCard.style.animation = 'slideInRight 0.5s ease-out';
+            reviewCard.innerHTML = `
+                <div class="review-header">
+                    <span class="review-name">${name}</span>
+                    <span class="review-rating">${stars}</span>
+                </div>
+                <p>"${review}"</p>
+                ${product ? `<p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;">Product: ${product}</p>` : ''}
+            `;
+            
+            // Add to reviews display
+            const reviewsDisplay = document.getElementById('reviewsDisplay');
+            reviewsDisplay.insertBefore(reviewCard, reviewsDisplay.firstChild);
+            
+            // Reset form
+            this.reset();
+            
+            // Show success message
+            alert('Thank you for your review! We appreciate your feedback.');
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
