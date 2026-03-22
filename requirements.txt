@@ -1,0 +1,36 @@
+# ----------------------------
+# Important Libraries
+# ----------------------------
+
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+# ----------------------------
+# DEEP LEARNING (DL)
+# ----------------------------
+torch
+torchvision
+torchaudio
+tensorflow
+keras
+
+
+# ----------------------------
+# NLP & GENAI
+# ----------------------------
+transformers
+datasets
+tokenizers
+sentencepiece
+accelerate
+huggingface-hub
+
+
+# Jupyter
+jupyterlab
+notebook
+ipykernel
+ipywidgets
+nbformat
